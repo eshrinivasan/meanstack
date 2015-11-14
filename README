@@ -16,8 +16,15 @@ git push -u origin master
 
 Mongo commands
 =====
-Import json into mongo db
-execute this command out side of mongoshell
+Import events.json we already have into mongo db
+execute this command out side of mongoshell within eventlist directory
 eventlist is the name of db
+
+use eventlist
+col1 = db.getCollection("users") //set up column users
+db.users.find() //see all the users in the eventlist db
+col1.insert({firstname:"Sue", email:"sue@mary.com"}) //To add uses to the db eventlist
+col1.update({firstname:  "Mary"}, {$set: {role:"member"}}) //update a user in db eventlist
+
 
 mongoimport --db eventlist --collection events --file jsondata/events.json --jsonArray
