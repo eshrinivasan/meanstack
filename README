@@ -1,0 +1,5 @@
+Import json into mongo db
+execute this command out side of mongoshell
+eventlist is the name of db
+
+mongoimport --db eventlist --collection events --file jsondata/events.json --jsonArray
