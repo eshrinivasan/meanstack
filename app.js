@@ -58,3 +58,8 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+var mongoose = require('mongoose');
+require('./models/Posts');
+
+mongoose.connect('mongodb://localhost/news');
